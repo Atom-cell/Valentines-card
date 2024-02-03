@@ -1,7 +1,7 @@
 import { useState } from "react";
 import phrases from "./utils/NoPhrases";
 
-const Invitation = () => {
+const Invitation = ({ name }: { name: string }) => {
   const [size, setSize] = useState<number>(25);
   const [yes, setYes] = useState<boolean>(false);
   const [count, setCount] = useState<number>(0);
@@ -35,7 +35,9 @@ const Invitation = () => {
         </h1>
       ) : (
         <h1 className="text-2xl md:text-4xl font-bold text-center ">
-          Will you be my Valentine?
+          {`${
+            name.charAt(0).toUpperCase() + name.slice(1)
+          }, Will you be my Valentine?`}
         </h1>
       )}
       {!yes && (
