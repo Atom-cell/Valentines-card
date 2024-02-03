@@ -1,7 +1,7 @@
 import { useState } from "react";
 function App() {
   const [noString, setNoString] = useState<string>("No");
-  const [size, setSize] = useState<string>("lg");
+  const [size, setSize] = useState<string>("3rem");
   const [yes, setYes] = useState<boolean>(false);
 
   const increaseSize = (): void => {
@@ -12,6 +12,30 @@ function App() {
     } else if (size === "3xl") {
       setSize("4xl");
     }
+  };
+
+  const getNoButtonText = () => {
+    const phrases = [
+      "Are you sure?",
+      "Really sure?",
+      "Think again!",
+      "Last chance!",
+      "Surely not?",
+      "You might regret this!",
+      "Give it another thought!",
+      "Are you absolutely certain?",
+      "This could be a mistake!",
+      "Have a heart!",
+      "Don't be so cold!",
+      "Change of heart?",
+      "Wouldn't you reconsider?",
+      "Is that your final answer?",
+      "You're breaking my heart ;(",
+      "If you say no, I'll be very sad",
+      "I'll be very very sad",
+      "I'll be very very very sad",
+      "I'll be very very very very sad",
+    ];
   };
 
   return (
@@ -39,16 +63,16 @@ function App() {
           <button
             type="button"
             onClick={() => setYes(true)}
-            className={`bg-green-500 py-1 w-16 text-white text-${size} font-bold rounded hover:bg-green-600`}
+            className={`bg-green-500 py-1 px-3 text-white text-[${size}] font-bold rounded hover:bg-green-600`}
           >
             Yes
           </button>
           <button
             type="button"
-            className="bg-red-500 py-1 w-16 text-white text-lg font-bold rounded hover:bg-red-600"
+            className="bg-red-500 py-1 px-3 text-white text-lg font-bold rounded hover:bg-red-600"
             onClick={() => increaseSize()}
           >
-            No
+            {noString}
           </button>
         </div>
       )}
