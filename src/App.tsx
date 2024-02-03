@@ -53,16 +53,16 @@ function App() {
         />
       )}
       {yes ? (
-        <h1 className="text-lg md:text-4xl font-semibold text-center ">
+        <h1 className="text-lg md:text-4xl font-bold text-center ">
           OK Yay!!!
         </h1>
       ) : (
-        <h1 className="text-lg md:text-4xl font-semibold text-center ">
+        <h1 className="text-lg md:text-4xl font-bold text-center ">
           Will you be my Valentine?
         </h1>
       )}
       {!yes && (
-        <div className="space-x-4 flex border-2 justify-center items-center  max-sm:flex-col max-sm:space-y-4">
+        <div className="md:space-x-4 flex justify-center items-center  max-sm:flex-col max-sm:space-y-4">
           <button
             type="button"
             onClick={() => setYes(true)}
