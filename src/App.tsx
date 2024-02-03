@@ -1,6 +1,5 @@
 import { useState } from "react";
 function App() {
-  const [noString, setNoString] = useState<string>("No");
   const [size, setSize] = useState<number>(25);
   const [yes, setYes] = useState<boolean>(false);
   const [count, setCount] = useState<number>(0);
