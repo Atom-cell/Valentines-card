@@ -52,11 +52,11 @@ function App() {
         />
       )}
       {yes ? (
-        <h1 className="text-lg md:text-4xl font-bold text-center ">
+        <h1 className="text-2xl md:text-4xl font-bold text-center ">
           OK Yay!!!
         </h1>
       ) : (
-        <h1 className="text-lg md:text-4xl font-bold text-center ">
+        <h1 className="text-2xl md:text-4xl font-bold text-center ">
           Will you be my Valentine?
         </h1>
       )}
